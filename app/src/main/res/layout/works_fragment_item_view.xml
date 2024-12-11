@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="@dimen/_7sdp"
+    app:cardUseCompatPadding="true"
+    android:backgroundTint="@color/Beige"
+    app:cardCornerRadius="@dimen/_7sdp"
+    >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_5sdp"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/constraintLayout"
+            android:padding="@dimen/_5sdp"
+            app:layout_constraintBottom_toTopOf="@id/itemWorkDescpLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+
+            >
+
+            <LinearLayout
+                android:id="@+id/workStatus"
+                android:layout_width="@dimen/_220sdp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/itemWorkTitle"
+                app:layout_constraintEnd_toStartOf="@id/itemWorkOvalimage"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ExtraText">
+
+                <TextView
+                    android:id="@+id/itemWorkDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="12-12-2023"
+                    android:textSize="@dimen/_11ssp"
+                    android:textColor="#7B6717"
+                    android:fontFamily="@font/amaranth"
+                    />
+`
+                <TextView
+                    android:id="@+id/itemWorkStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_80sdp"
+                    android:fontFamily="@font/amaranth"
+                    android:text="Pending"
+                    android:textColor="#E54646"
+                    android:textSize="@dimen/_13ssp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <ImageView
+                android:id="@+id/itemWorkOvalimage"
+                android:layout_width="@dimen/_18sdp"
+                android:layout_height="@dimen/_18sdp"
+                android:src="@drawable/red_oval"
+                android:layout_marginStart="@dimen/_14sdp"
+                app:layout_constraintStart_toEndOf="@id/workStatus"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+            <TextView
+                android:id="@+id/itemWorkTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Work Title"
+                android:textColor="@color/Darkblue"
+                android:textSize="@dimen/_15ssp"
+                android:layout_marginTop="6dp"
+                android:textStyle="bold"
+                android:fontFamily="@font/amaranth"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/workStatus"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:id="@+id/itemWorkDescpLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/constraintLayout"
+            >
+
+            <TextView
+                android:id="@+id/itemWorkDescTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="@dimen/_12ssp"
+                android:textColor="#7B6717"
+                android:fontFamily="@font/amaranth"
+                android:text="Work Description :- "
+                android:padding="@dimen/_1sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                />
+
+            <TextView
+                android:id="@+id/itemWorkdescContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="This is the description of the work"
+                android:textColor="@color/Darkblue"
+                android:fontFamily="@font/amaranth"
+                android:textSize="@dimen/_11ssp"
+                android:layout_marginStart="@dimen/_7sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                />
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/unassignedBtn"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="wrap_content"
+            android:text="Unassigned"
+            android:backgroundTint="@color/darkpink"
+            android:textColor="@color/Beige"
+            android:textAllCaps="false"
+            app:cornerRadius="@dimen/_16sdp"
+            android:fontFamily="@font/amaranth"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/itemWorkDescpLayout"
+            android:layout_marginTop="@dimen/_6sdp"
+            />
+
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

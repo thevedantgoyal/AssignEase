@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/rm309_adj_09"
+    android:layout_height="match_parent"
+    tools:context=".Auth.UploadImage">
+
+    <TextView
+        android:id="@+id/imagetxt_upload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="28dp"
+        android:fontFamily="@font/amaranth"
+        android:text="Upload User Details :"
+        android:textSize="@dimen/_20ssp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/signup_profile_image"
+        android:layout_width="@dimen/_150sdp"
+        android:layout_height="@dimen/_150sdp"
+        android:layout_marginTop="28dp"
+        android:scaleType="centerCrop"
+        android:src="@color/darkpink"
+        app:civ_border_color="#FF000000"
+        app:civ_border_width="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imagetxt_upload" />
+
+    <TextView
+        android:id="@+id/signup_uplaod_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:fontFamily="@font/amaranth"
+        android:text="Click Here to Uplaod"
+        android:textColor="@color/Darkblue"
+        android:textSize="@dimen/_16ssp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/signup_profile_image"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/signup_profile_image"
+        app:layout_constraintTop_toBottomOf="@+id/signup_profile_image" />
+
+    <TextView
+        android:id="@+id/enterNumberTcxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter your Number..."
+        android:textStyle="bold"
+        android:fontFamily="@font/amaranth"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:textColor="@color/Darkblue"
+        android:textSize="@dimen/_18ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="@dimen/_66sdp"
+        app:layout_constraintTop_toBottomOf="@id/signup_uplaod_txt"
+        />
+
+    <EditText
+        android:id="@+id/editTextNumber2"
+        android:layout_width="50dp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/edit_txt_bg"
+        android:ems="10"
+        android:enabled="false"
+        android:fontFamily="@font/amaranth"
+        android:inputType="number"
+        android:text="  +91"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/phoneEditTextNumber"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <EditText
+        android:id="@+id/phoneEditTextNumber"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_100sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:background="@drawable/edit_txt_bg"
+        android:ems="10"
+        android:hint="Type your number"
+        android:inputType="number"
+        android:paddingStart="16dp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/amaranth"
+        android:textColorHint="#606060"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+       app:layout_constraintStart_toEndOf="@id/editTextNumber2"
+        app:layout_constraintTop_toBottomOf="@+id/signup_uplaod_txt" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/upload_newbtn"
+        android:layout_width="@dimen/_220sdp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="@color/darkpink"
+        android:fontFamily="@font/amaranth"
+        android:text="Send Otp"
+        android:textColor="@color/Beige"
+        android:textSize="@dimen/_16ssp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

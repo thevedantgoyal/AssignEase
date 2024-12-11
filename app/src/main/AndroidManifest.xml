@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/assign"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/assign"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AssignEase"
+        tools:targetApi="31">
+        <activity
+            android:name=".Auth.OtpActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EmployeeMainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Auth.UploadImage"
+            android:exported="false" />
+        <activity
+            android:name=".Auth.SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Auth.SignIn"
+            android:exported="false" />
+        <activity
+            android:name=".Auth.SignUp"
+            android:exported="true"></activity>
+        <activity
+            android:name=".BossMainActivity"
+            android:exported="true" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <service
+            android:name=".apiInterface.NotificationService"
+            android:exported="false"
+            android:permission="com.google.android.c2dm.permission.Send">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

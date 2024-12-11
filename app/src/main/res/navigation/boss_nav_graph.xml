@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/boss_nav_graph"
+    app:startDestination="@id/employeeFragment">
+
+    <fragment
+        android:id="@+id/employeeFragment"
+        android:name="com.example.assignease.fragments.EmployeeFragment"
+        android:label="fragment_employee"
+        tools:layout="@layout/fragment_employee" >
+        <action
+            android:id="@+id/action_employeeFragment_to_workFragment"
+            app:destination="@id/workFragment" />
+        <action
+            android:id="@+id/action_employeeFragment_to_homeProfile"
+            app:destination="@id/homeProfile" />
+        <action
+            android:id="@+id/action_employeeFragment_to_employeeProfile"
+            app:destination="@id/employeeProfile" />
+    </fragment>
+    <fragment
+        android:id="@+id/workFragment"
+        android:name="com.example.assignease.fragments.WorkFragment"
+        android:label="fragment_work"
+        tools:layout="@layout/fragment_work" >
+        <action
+            android:id="@+id/action_workFragment_to_assignWorkFragment"
+            app:destination="@id/assignWorkFragment" />
+        <action
+            android:id="@+id/action_workFragment_to_employeeFragment"
+            app:destination="@id/employeeFragment" />
+        <argument
+            android:name="employeeData"
+            app:argType="com.example.assignease.models.Users" />
+    </fragment>
+    <fragment
+        android:id="@+id/assignWorkFragment"
+        android:name="com.example.assignease.fragments.AssignWorkFragment"
+        android:label="fragment_assign_work"
+        tools:layout="@layout/fragment_assign_work" >
+        <action
+            android:id="@+id/action_assignWorkFragment_to_workFragment"
+            app:destination="@id/workFragment" />
+        <argument
+            android:name="employeeDetail"
+            app:argType="com.example.assignease.models.Users" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeProfile"
+        android:name="com.example.assignease.BossProfile"
+        android:label="fragment_home_profile"
+        tools:layout="@layout/fragment_boss_profile" >
+        <action
+            android:id="@+id/action_homeProfile_to_employeeFragment"
+            app:destination="@id/employeeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/employeeProfile"
+        android:name="com.example.assignease.employeeProfile"
+        android:label="employeeProfile" >
+        <action
+            android:id="@+id/action_employeeProfile_to_employeeFragment"
+            app:destination="@id/employeeFragment" />
+    </fragment>
+</navigation>

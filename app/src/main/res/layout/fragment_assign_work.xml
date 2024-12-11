@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/rm309_adj_09"
+    tools:context=".fragments.AssignWorkFragment">
+
+        <TextView
+            android:id="@+id/assignWorkstxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Assign Works"
+            android:textColor="@color/Darkblue"
+            android:textStyle="bold"
+            android:textSize="@dimen/_22ssp"
+            android:fontFamily="@font/amaranth"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="@dimen/_10sdp"
+            />
+
+        <ImageView
+            android:id="@+id/backbtn"
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:src="@drawable/left_arrow"
+            android:layout_marginStart="@dimen/_12sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="@dimen/_15sdp"
+
+            />
+
+
+    <LinearLayout
+        android:id="@+id/title_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/assignWorkstxt">
+
+
+        <EditText
+            android:id="@+id/workTitle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/custom_login_feilds"
+            android:fontFamily="@font/amaranth"
+            android:hint="Work Title"
+            android:maxLines="1"
+            android:paddingStart="20dp"
+            android:textColorHint="@color/Darkblue"
+            android:textSize="@dimen/_13ssp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_24sdp"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/amaranth"
+                android:text="Priority : "
+                android:textSize="@dimen/_16ssp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/green_oval"
+                android:layout_width="32dp"
+                android:layout_height="30dp"
+                android:background="@drawable/green_oval" />
+
+            <ImageView
+                android:id="@+id/orange_oval"
+                android:layout_width="32dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/orange_oval" />
+
+            <ImageView
+                android:id="@+id/red_oval"
+                android:layout_width="32dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/red_oval" />
+
+            <TextView
+                android:id="@+id/date_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Last Date : "
+                android:textStyle="bold"
+                android:fontFamily="@font/amaranth"
+                android:textSize="@dimen/_14ssp"
+                android:layout_marginStart="@dimen/_16sdp"
+                />
+
+            <ImageView
+                android:id="@+id/date_picker"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:background="@drawable/calendar"
+                />
+        </LinearLayout>
+        <EditText
+            android:id="@+id/workDescription"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="@dimen/_23sdp"
+            android:hint="Work Description..."
+            android:textColorHint="@color/Darkblue"
+            android:textSize="@dimen/_14ssp"
+            android:textStyle="bold"
+            android:padding="10dp"
+            android:fontFamily="@font/amaranth"
+            android:background="@drawable/assign_corner_radius"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:gravity="start"
+            app:layout_constraintTop_toBottomOf="@+id/title_txt"
+            tools:ignore="SpeakableTextPresentCheck" />
+    </LinearLayout>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/work_Assignment_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="18dp"
+        android:backgroundTint="@color/Beige"
+        android:src="@drawable/check"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+<!--    <androidx.appcompat.widget.Toolbar-->
+<!--        android:id="@+id/tb_assignWork"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="@dimen/_42sdp"-->
+<!--        app:title="Assign Work"-->
+<!--        app:titleTextColor="@color/Beige"-->
+<!--        android:background="#4D3545"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        android:paddingStart="@dimen/_10sdp"-->
+<!--        />-->
+

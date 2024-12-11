@@ -1,0 +1,19 @@
+package com.example.assignease.apiInterface
+
+import com.example.assignease.models.NotificationRequest
+import retrofit2.Call
+import retrofit2.http.Body
+import retrofit2.http.Headers
+import retrofit2.http.POST
+
+interface ApiInterface {
+    @Headers(
+        "Content-Type: application/json",
+        "Authorization: Bearer ya29.c.c0AY_VpZhEZrSN-JGIz2zk27NkUJdB3ZoGmDNj-CviG3iscSVFpiZGs2sMZ31xJI6K3bYKm81ZRubP7gi_l67ekOoNWEWRU0gb9d61GWE15HSzqFYEFeV1k-vRTmZOWX4IkDog8uF4VYJ6Oe5zp1jTA2jVoKj3OdxulTJ9IwONkqoaZC1e0XIj_in5t3lAsAMmSa2onVpgwBP9DU8Ol7EPDtFpFQxWaONYgR23q6S5DkL_2GJlznps97pkxFQtPV9bUBiwOK4-W55hwKzuobZY2gTGVR3ZB5xXpsZ76afzvfOLzMGZi05F2G7WhJimF09xK-j_6Pd1sTWOT9eo50C3bW3o15jbgYymxqA_-waLdhnuLQBfRhMR7Xl77wT387Kn-VXoWkwXsQugaMuXX0szUpORpv788gYcoU9tqqpyRuc1VVpStrJiZsS9YtMjmgimYs9Ol5cXa346Vj2jiqqclo_t0-R4qQVjtn_24Fmn0q5rep7Uo16x7xeZ5gc6V6lZkV2bjzg9jigYOVQVXzn08-o2Zr1tuq1uqbs5pwrrp9i05zmfixeUuh9hayqRUoUJUuY0Jl2uirQzlzI159guUxfl604FRJY_utQxIxoMn2iYZyaBQbdQUpBIp860RzBVlx7h085Bda_JwSOF9z0nfJY1ejtO0Uki4XcfnJu_Iitf7ej4u7vVFQaIdZUcyvxYp4mlI41YOwJW_r-goqZWJmiiy1gOddfUu0qZ8e78JMtbO6iazmUvUwVpUzBjbRUfFzSdfJb14yIvjVi-tdtInoQdrUJfvV_On1XXhkisv-n54sXyvvY0lo3gar1FO4rje-ktl3XjugoIxo2mJekV1e2WFR-7k2Wy_1Ww_XXW7ZMM9y7Bhw8m7xOysaR9qkBg1e_OWJI3a86a6xu5ciBUQVkvnhubgeU605i6JeihXVf1Zut3tuljxmzqSefl16ScU467Qh3S7fdh-Mk8Xl6XoX37-iFbk9SU2faB3Oh4ZmsQM4pz398zfMV"
+    )
+
+    @POST("v1/projects/assignease-4470e/messages:send")
+    fun sendNotification(@Body notification: NotificationRequest): Call<NotificationRequest>
+}
+
+

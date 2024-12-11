@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="Beige">#F1E5D1</color>
+    <color name="Peach">#DBB5B5</color>
+    <color name="pink">#FFCBCB</color>
+    <color name="darkpink">#987070</color>
+    <color name="darkPurple">#C738BD</color>
+    <color name="Darkblue">#102C57</color>
+    <color name="offwhite">#F6F5F2</color>
+    <color name="mehendi">#5D0E41</color>
+    <color name="green">#435D40</color>
+
+</resources>

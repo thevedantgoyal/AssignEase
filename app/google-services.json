@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "317976043671",
+    "firebase_url": "https://assignease-4470e-default-rtdb.firebaseio.com",
+    "project_id": "assignease-4470e",
+    "storage_bucket": "assignease-4470e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:317976043671:android:a14781d7f60e353b5709d2",
+        "android_client_info": {
+          "package_name": "com.example.assignease"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "317976043671-h2rbp6vrl134256fnpnudi9s4tc68ro7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.assignease",
+            "certificate_hash": "50b222b85e0cc6a3ed06fee330d0e3d9cc4b163b"
+          }
+        },
+        {
+          "client_id": "317976043671-951mttcuvl53gt3pprusor23vhe21tl4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4OTfTMP5EZHpmK-70sUqC_t-nQSlh0_E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "317976043671-951mttcuvl53gt3pprusor23vhe21tl4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

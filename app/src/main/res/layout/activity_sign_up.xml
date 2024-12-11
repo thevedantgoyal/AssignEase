@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/rm309_adj_09"
+    tools:context=".Auth.SignUp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <TextView
+                android:id="@+id/signup_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:fontFamily="@font/amaranth"
+                android:text="Sign Up Please"
+                android:textAllCaps="false"
+                android:textColor="@color/Darkblue"
+                android:textSize="@dimen/_24ssp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/signup_image"
+                android:layout_width="@dimen/_300sdp"
+                android:layout_height="@dimen/_150sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:src="@drawable/undraw_undraw_undraw_undraw_sign_up_ln1s__1__s4bc__1__ee41__1__kf4d"
+                app:layout_constraintTop_toBottomOf="@id/signup_txt"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+
+<!--            <de.hdodenhof.circleimageview.CircleImageView-->
+<!--                android:id="@+id/signup_profile_image"-->
+<!--                android:layout_width="150dp"-->
+<!--                android:layout_height="150dp"-->
+<!--                android:layout_marginTop="@dimen/_20sdp"-->
+<!--                android:scaleType="centerCrop"-->
+<!--                android:src="@color/darkpink"-->
+<!--                app:civ_border_color="#FF000000"-->
+<!--                app:civ_border_width="2dp"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintHorizontal_bias="0.498"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/signup_txt" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/signup_uplaod_txt"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:text="Upload Image"-->
+<!--                android:textColor="@color/Darkblue"-->
+<!--                android:textSize="16sp"-->
+<!--                android:textStyle="bold"-->
+<!--                app:layout_constraintEnd_toEndOf="@+id/signup_profile_image"-->
+<!--                app:layout_constraintStart_toStartOf="@+id/signup_profile_image"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/signup_profile_image" />-->
+
+
+            <LinearLayout
+                android:id="@+id/signup_radio"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/signup_image">
+
+                <TextView
+                    android:id="@+id/radiogroup_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:text="Select User type : "
+                    android:textAllCaps="false"
+                    android:textColor="@color/Darkblue"
+                    android:textSize="@dimen/_14ssp"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/Radiogroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/radiobutton_boss"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/custom_radiobuttons"
+                        android:checked="false"
+                        android:letterSpacing="0.04"
+                        android:padding="@dimen/_3sdp"
+                        android:text="Boss"
+                        android:textColor="@color/Darkblue"
+                        android:textSize="@dimen/_13ssp"
+                        android:textStyle="bold"
+                        app:useMaterialThemeColors="false" />
+
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/radiobutton_employee"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_3sdp"
+                        android:button="@drawable/custom_radiobuttons"
+                        android:checked="false"
+                        android:letterSpacing="0.04"
+                        android:padding="@dimen/_2sdp"
+                        android:text="Employee"
+                        android:textColor="@color/Darkblue"
+                        android:textSize="@dimen/_13ssp"
+                        android:textStyle="bold"
+                        app:useMaterialThemeColors="false" />
+                </RadioGroup>
+            </LinearLayout>
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/signup_name"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_36sdp"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:background="@drawable/custom_login_feilds"
+                android:fontFamily="@font/amaranth"
+                android:hint="Name"
+                android:inputType="text"
+                android:maxLines="1"
+                android:paddingStart="@dimen/_12sdp"
+                android:textColorHint="#040A2A"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/signup_radio"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/signup_email"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_36sdp"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:background="@drawable/custom_login_feilds"
+                android:fontFamily="@font/amaranth"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:paddingStart="@dimen/_12sdp"
+                android:textColorHint="#040A2A"
+                app:layout_constraintEnd_toEndOf="@id/signup_name"
+                app:layout_constraintStart_toStartOf="@id/signup_name"
+                app:layout_constraintTop_toBottomOf="@id/signup_name"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/signup_password"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_36sdp"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:background="@drawable/custom_login_feilds"
+                android:fontFamily="@font/amaranth"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:paddingStart="@dimen/_12sdp"
+                android:textColorHint="#040A2A"
+                app:layout_constraintEnd_toEndOf="@id/signup_email"
+                app:layout_constraintStart_toStartOf="@id/signup_email"
+                app:layout_constraintTop_toBottomOf="@id/signup_email"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/signup_confPassword"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_36sdp"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:background="@drawable/custom_login_feilds"
+                android:fontFamily="@font/amaranth"
+                android:hint="Confirm Password"
+                android:inputType="textPassword"
+                android:paddingStart="@dimen/_12sdp"
+                android:textColorHint="#040A2A"
+                app:layout_constraintEnd_toEndOf="@id/signup_password"
+                app:layout_constraintStart_toStartOf="@id/signup_password"
+                app:layout_constraintTop_toBottomOf="@id/signup_password"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/signup_btn"
+                android:layout_width="@dimen/_220sdp"
+                android:layout_height="60dp"
+                android:layout_marginTop="28dp"
+                android:backgroundTint="@color/darkpink"
+                android:fontFamily="@font/amaranth"
+                android:text="Register"
+                android:textColor="@color/Beige"
+                android:textSize="@dimen/_16ssp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.495"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/signup_confPassword" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/_30sdp"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/signup_btn"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@id/signup_btn"
+                app:layout_constraintTop_toBottomOf="@id/signup_btn"
+                app:layout_constraintVertical_bias="1.0">
+
+                <TextView
+                    android:id="@+id/alreay_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Alreay have an Account?"
+                    android:textColor="@color/Darkblue"
+                    android:textSize="@dimen/_11ssp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/signup_signinbtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:text="Sign In"
+                    android:textColor="#146086"
+                    android:textSize="@dimen/_11ssp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
